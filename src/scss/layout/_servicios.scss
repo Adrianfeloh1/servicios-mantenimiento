@@ -1,0 +1,38 @@
+.listado-servicios {
+  @include telefono {
+    @include grid(2, 2rem);
+  }
+
+  .servicio {
+    margin-bottom: 2rem;
+    background-color: $blanco;
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    @include telefono {
+      margin-bottom: 0;
+    }
+
+    .nombre-servicio {
+      color: $negro;
+      font-weight: normal;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .precio-servicio {
+      color: $rojo;
+      font-weight: $black;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    &.seleccionado {
+      background-color: $rojo;
+
+      p {
+        color: $blanco;
+      }
+    }
+  }
+}

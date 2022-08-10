@@ -1,0 +1,34 @@
+{
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "lavado sencillo",
+            "precio": 12000
+        },
+        {
+            "id": 2,
+            "nombre": "lavado y Brillado",
+            "precio": 15000
+        },
+        {
+            "id": 3,
+            "nombre": "Lavado y restauración",
+            "precio": 25000
+        },
+        {
+            "id": 4,
+            "nombre": "Mantenimiento kit arrastre",
+            "precio": 30000
+        },
+        {
+            "id": 5,
+            "nombre": "Mantenimiento General",
+            "precio": 175000
+        },
+        {
+            "id": 6,
+            "nombre": "Mantenimiento preventivo",
+            "precio": 250000
+        }        
+    ]
+}

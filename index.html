@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Mantenimiento de Motos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Baloo+2:wght@500&family=Basic&family=Bebas+Neue&family=Carter+One&family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Nunito+Sans:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Ramabhadra&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+
+    <div class="contenedor-moto">
+        <div class="imagen"></div>
+        <div class="app">
+            <header class="header">
+                <h1>FK8 Servicios & Mtto</h1>
+            </header>
+            <nav class="tabs">
+                <button type="button">Servicios</button>
+                <button type="button">Info Cliente</button>
+                <button type="button">Resumen</button>
+            </nav>
+
+            <!-- Inicia contendo de la app -->
+
+            <div class="seccion">
+                <h2>Servicios</h2>
+                <p class="text-center">Elige tus Servicios a Continuación</p>
+                <div id="servicios" class="listado-servicios"></div> <!-- Para importarlo desde el app.js desde el servicios JSON-->
+            </div>
+
+            <div class="seccion">
+                <h2>Tus Datos y Cita</h2>
+            </div>
+
+            <div class="seccion">
+                <h2>Resumen</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="build/js/bundle.min.js"></script>
+</body>
+</html>
