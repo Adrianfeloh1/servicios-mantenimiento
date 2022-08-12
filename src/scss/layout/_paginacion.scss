@@ -1,0 +1,23 @@
+.paginacion {
+  display: flex;
+  justify-content: space-between;
+  padding: $separacion 0;
+
+  button {
+    background-color: $rojo;
+    color: $blanco;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+
+    &.ocultar {
+      /* display: none; */ //este general mala experiencia de usuario 
+      visibility: hidden;
+    }
+  }
+}

@@ -1,17 +1,20 @@
-.tabs{
- 
-    @include grid (3, 2rem);
+.tabs {
+  @include grid(3, 2rem);
 
-    button{
-    
+  button {
     background-color: $blanco;
     font-size: 2rem;
     font-weight: normal;
     padding: 1.5rem 0.5rem;
     text-align: center;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     border: none;
-    cursor: pointer; 
-    border-radius: 1rem;   
+    cursor: pointer;
+    border-radius: 1rem;
+
+    &.actual {
+      background-color: $rojo;
+      color: $blanco;
     }
+  }
 }

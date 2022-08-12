@@ -18,25 +18,35 @@
                 <h1>FK8 Servicios & Mtto</h1>
             </header>
             <nav class="tabs">
-                <button type="button">Servicios</button>
-                <button type="button">Info Cliente</button>
-                <button type="button">Resumen</button>
+                <button type="button" data-paso="1">Servicios</button> <!-- se crean los dataset  -->
+                <button type="button" data-paso="2">Info Cliente</button>
+                <button type="button" data-paso="3">Resumen</button>
             </nav>
 
             <!-- Inicia contendo de la app -->
 
-            <div class="seccion">
+            <div id="paso-1" class="seccion">
                 <h2>Servicios</h2>
                 <p class="text-center">Elige tus Servicios a Continuación</p>
                 <div id="servicios" class="listado-servicios"></div> <!-- Para importarlo desde el app.js desde el servicios JSON-->
             </div>
 
-            <div class="seccion">
+            <div id="paso-2" class="seccion">
                 <h2>Tus Datos y Cita</h2>
             </div>
 
-            <div class="seccion">
+            <div id="paso-3" class="seccion">
                 <h2>Resumen</h2>
+            </div>
+
+            <div class="paginacion">
+                <button id="anterior">
+                    &laquo; Antetior<!-- para agregarle las flechas dentro del boton -->
+                </button>
+
+                <button id="siguiente">
+                    siguiente &raquo; <!-- para agregarle las flechas dentro del boton -->
+                </button>
             </div>
 
         </div>
