@@ -1,0 +1,26 @@
+.formulario{
+    width: 100%;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+      
+    
+
+    label {
+        flex: 1; //factor de crecimiento de la casilla label, 
+        color: $blanco; 
+        padding: 1.5rem;
+        font-size: 1.9rem;  
+           
+    }
+
+    input{
+        flex: 4; // factor de crecimiento casilla input del resto del tamaño, 
+        //si label e input tuvieran 1, cada casilla ocuparia el 50% del ancho
+        border-radius: 1rem;
+        border: none;
+
+    }
+}
