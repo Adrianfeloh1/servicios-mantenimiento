@@ -37,6 +37,10 @@ function iniciarApp() {
   //muestra el resumen de la cita o mensaje de error cuando no pase la validación
 
   mostrarResumen();
+
+  //Almacena el nombre de la cita en el objeto
+
+  nombreCita();
 }
 
 function mostrarSeccion() {
@@ -263,4 +267,60 @@ function mostrarResumen() {
     //agregar resumen Div
     resumenDiv.appendChild(noServicios);
   }
+}
+
+function nombreCita() { // 8.CAPTURAR LOS DATOS DEL FORMULARIO
+  const nombreInput = document.querySelector("#nombre");
+  nombreInput.addEventListener("input", e => {//evento comun para los formularios es el input
+    const nombreTexto = e.target.value.trim();//trim elimina los espacios en blanco al inicio y al final
+    
+    //console.log(nombreTexto);//para verificar que se vea en la consola cada vez que escriba en el input nombre
+
+    //  9. Validacion de que nombreTexto no tenga caracteres vacios 
+    if(nombreTexto === "" || nombreTexto.length < 3){
+      mostrarAlerta("Nombre no valido", "error") //tipo error - 10
+      //console.log("Nombre no valido");
+    } else {
+      // 11. Para eliminar la alerta cuando digite bien el nombre
+      const alerta = document.querySelector(".alerta");
+      if (alerta) {//si alerta existe
+        alerta.remove();
+      }
+      
+      // se pone en el objeto cita
+      cita.nombre = nombreTexto;
+      //console.log(cita);
+    }
+
+  })
+}
+
+function mostrarAlerta(mensaje, tipo) { // 10
+  //console.log("El mensaje es", mensaje);
+
+  //11. como se ven en la consola varias alrtas, entonces debemos hacer un condicional para no duplicarlas
+  //creamos una variable agregandola a alerta
+  const alertaPrevia = document.querySelector(".alerta");
+  if(alertaPrevia){//si alertaPrevia existe, 
+    //alertaPrevia.remove();//entonces que la elimine, pero esto general HTML
+    //la mejor opcion es poniendo un return
+    return; //asi cuando detecte la alerta previa, la ejecución finaliza
+  }
+
+
+  const alerta = document.createElement("DIV");
+  alerta.textContent = mensaje;
+  alerta.classList.add("alerta");
+
+  if (tipo === "error") {
+    alerta.classList.add("error")
+  }
+  //console.log(alerta);//verificamos que se vea el div de alerta en la consola
+
+  //Ahora debemos mostrarla en el HTML en el formulario
+  const formulario = document.querySelector(".formulario");
+  formulario.appendChild(alerta);//creamos una variable para seleccionar la clase .formulario y agregamos el div alerta al hijo
+  //CON ESTO HACEMOS QUE LA ALERTA SE VEA EN LA PANTALLA 
+
+
 }

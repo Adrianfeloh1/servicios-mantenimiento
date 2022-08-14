@@ -21,6 +21,19 @@
         //si label e input tuvieran 1, cada casilla ocuparia el 50% del ancho
         border-radius: 1rem;
         border: none;
-
     }
+}
+
+.alerta { 
+    padding: $separacion / 2;
+    color:$blanco;
+    text-align: center;
+    width: 100%;
+    display: block;
+
+    &.error{
+        background-color: $rojo;
+    }
+    
+
 }
